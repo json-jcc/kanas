@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<renderer name="shader_toy_0" rt="shaders/renderers/shader_toy/shader_toy.rtxml">
+  
+  <graphics_pipeline_program>
+    
+    <frag>
+      <uniform>
+
+      </uniform>
+
+      <shader_storage>
+
+      </shader_storage>
+
+      <callback>
+        <mainImage>
+          vec2 uv = (fragCoord-(iResolution.xy/2.))/iResolution.x; // screen uv
+          vec3 ro = vec3(0.,0.,-50.); // ray origin (camera/eye position)
+          ro.xz = rotate(ro.xz,iTime); //
+
+          vec3 cf = normalize(-ro);
+          vec3 cs = normalize(cross(cf,vec3(0.,1.,0.)));
+          vec3 cu = normalize(cross(cf,cs));
+          vec3 uuv = ro+cf*3. + uv.x*cs + uv.y*cu;
+
+          vec3 rd = normalize(uuv-ro); // ray direction
+          vec4 col = rm(ro,rd); // if marched, return the suf color, if not marched return the evn color
+
+          fragColor = col;
+        </mainImage>
+      </callback>
+    </frag>
+    
+  </graphics_pipeline_program>
+	
+</renderer>

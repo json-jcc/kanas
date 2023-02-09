@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<graphics_pipeline_program_template name="" dir="">
+  
+  <vertex_shader_template file="">
+    
+  </vertex_shader_template>
+  
+  <tessellation_control_shader_template file="">
+    
+  </tessellation_control_shader_template>
+  
+  <tessellation_evaluation_shader_template file="">
+    
+  </tessellation_evaluation_shader_template>
+  
+  <geometry_shader_template file="">
+    
+  </geometry_shader_template>
+  
+  <fragment_shader_template file="">
+    
+  </fragment_shader_template>
+
+</graphics_pipeline_program_template>

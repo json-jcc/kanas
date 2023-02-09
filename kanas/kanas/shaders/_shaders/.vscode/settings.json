@@ -1,0 +1,11 @@
+{
+    "glsl-linter.validatorPath": "C:/Program Files Extended/glslang-master-windows-x64-Release/bin/glslangValidator.exe",    
+    "glsl-linter.fileExtensions": {
+        ".frag": "frag",
+        ".vert": "vert",
+        ".tese": "tese",
+        ".tesc": "tesc",
+        ".geom": "geom",
+        ".comp": "comp"
+    }
+}

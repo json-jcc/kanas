@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{69c2edff-3642-4956-8677-ba5e7547e183}</ProjectGuid>
+    <RootNamespace>kanas</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <LanguageStandard_C>stdc17</LanguageStandard_C>
+      <AdditionalIncludeDirectories>$(MSBuildProjectDirectory)\source\;$(MSBuildProjectDirectory)\dependencies\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessToFile>false</PreprocessToFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(MSBuildProjectDirectory)\dependencies\glew-2.2.0\lib\Release\x64;$(MSBuildProjectDirectory)\dependencies\vulkan\lib;$(MSBuildProjectDirectory)\dependencies\glfw-3.3.4.bin.WIN64\lib-vc2019\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>opengl32.lib;glfw3.lib;vulkan-1.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="kanas.cpp" />
+    <ClCompile Include="source\ecs\de_other_object.cpp" />
+    <ClCompile Include="source\ecs\de_other_side.cpp" />
+    <ClCompile Include="source\ecs\entity.cpp" />
+    <ClCompile Include="source\kanas\core\command_buffer.cpp" />
+    <ClCompile Include="source\kanas\core\command_pool.cpp" />
+    <ClCompile Include="source\kanas\core\compute_pipeline.cpp" />
+    <ClCompile Include="source\kanas\core\deferred_operation.cpp" />
+    <ClCompile Include="source\kanas\core\descriptor_pool.cpp" />
+    <ClCompile Include="source\kanas\core\descriptor_set.cpp" />
+    <ClCompile Include="source\kanas\core\descriptor_set_layout.cpp" />
+    <ClCompile Include="source\kanas\core\device.cpp" />
+    <ClCompile Include="source\kanas\core\device_memory.cpp" />
+    <ClCompile Include="source\kanas\core\framebuffer.cpp" />
+    <ClCompile Include="source\kanas\core\graphics_pipeline.cpp" />
+    <ClCompile Include="source\kanas\core\physical_device.cpp" />
+    <ClCompile Include="source\kanas\core\pipeline.cpp" />
+    <ClCompile Include="source\kanas\core\pipeline_cache.cpp" />
+    <ClCompile Include="source\kanas\core\pipeline_layout.cpp" />
+    <ClCompile Include="source\kanas\core\query_pool.cpp" />
+    <ClCompile Include="source\kanas\core\queue.cpp" />
+    <ClCompile Include="source\kanas\core\ray_tracing_pipeline.cpp" />
+    <ClCompile Include="source\kanas\core\render_pass.cpp" />
+    <ClCompile Include="source\kanas\core\resource\acceleration_structure.cpp" />
+    <ClCompile Include="source\kanas\core\resource\buffer.cpp" />
+    <ClCompile Include="source\kanas\core\resource\buffer_view.cpp" />
+    <ClCompile Include="source\kanas\core\resource\image.cpp" />
+    <ClCompile Include="source\kanas\core\resource\image_view.cpp" />
+    <ClCompile Include="source\kanas\core\sampler.cpp" />
+    <ClCompile Include="source\kanas\core\shader.cpp" />
+    <ClCompile Include="source\kanas\core\shader_module.cpp" />
+    <ClCompile Include="source\kanas\core\subpass.cpp" />
+    <ClCompile Include="source\kanas\core\surface.cpp" />
+    <ClCompile Include="source\kanas\core\swapchain.cpp" />
+    <ClCompile Include="source\kanas\core\synchronization\Event.cpp" />
+    <ClCompile Include="source\kanas\core\synchronization\fence.cpp" />
+    <ClCompile Include="source\kanas\core\synchronization\semaphore.cpp" />
+    <ClCompile Include="source\kanas\core\vulkan_instance.cpp" />
+    <ClCompile Include="source\kanas\dispatcher.cpp" />
+    <ClCompile Include="source\kanas\dispatcher_lua.cpp" />
+    <ClCompile Include="source\network\network_dispatcher.cpp" />
+    <ClCompile Include="source\window\window.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="source\core\core_lib.h" />
+    <ClInclude Include="source\ecs\de_other_object.h" />
+    <ClInclude Include="source\ecs\de_other_side.h" />
+    <ClInclude Include="source\ecs\entity.h" />
+    <ClInclude Include="source\engine\karamay_engine.h" />
+    <ClInclude Include="source\environment\platforms\windows\winsocket.h" />
+    <ClInclude Include="source\kanas\core\command_buffer.h" />
+    <ClInclude Include="source\kanas\core\command_pool.h" />
+    <ClInclude Include="source\kanas\core\compute_pipeline.h" />
+    <ClInclude Include="source\kanas\core\deferred_operation.h" />
+    <ClInclude Include="source\kanas\core\descriptor_pool.h" />
+    <ClInclude Include="source\kanas\core\descriptor_set.h" />
+    <ClInclude Include="source\kanas\core\descriptor_set_layout.h" />
+    <ClInclude Include="source\kanas\core\descriptor_update_template.h" />
+    <ClInclude Include="source\kanas\core\device.h" />
+    <ClInclude Include="source\kanas\core\device_memory.h" />
+    <ClInclude Include="source\kanas\core\device_object.h" />
+    <ClInclude Include="source\kanas\core\enumerators.h" />
+    <ClInclude Include="source\kanas\core\flags.h" />
+    <ClInclude Include="source\kanas\core\framebuffer.h" />
+    <ClInclude Include="source\kanas\core\graphics_pipeline.h" />
+    <ClInclude Include="source\kanas\core\KanasCoreMacros.h" />
+    <ClInclude Include="source\kanas\core\KanasCoreMinimal.h" />
+    <ClInclude Include="source\kanas\core\physical_device.h" />
+    <ClInclude Include="source\kanas\core\pipeline.h" />
+    <ClInclude Include="source\kanas\core\pipeline_cache.h" />
+    <ClInclude Include="source\kanas\core\pipeline_layout.h" />
+    <ClInclude Include="source\kanas\core\query_pool.h" />
+    <ClInclude Include="source\kanas\core\queue.h" />
+    <ClInclude Include="source\kanas\core\ray_tracing_pipeline.h" />
+    <ClInclude Include="source\kanas\core\render_pass.h" />
+    <ClInclude Include="source\kanas\core\resource\acceleration_structure.h" />
+    <ClInclude Include="source\kanas\core\resource\buffer.h" />
+    <ClInclude Include="source\kanas\core\resource\buffer_view.h" />
+    <ClInclude Include="source\kanas\core\resource\image.h" />
+    <ClInclude Include="source\kanas\core\resource\image_view.h" />
+    <ClInclude Include="source\kanas\core\sampler.h" />
+    <ClInclude Include="source\kanas\core\shader.h" />
+    <ClInclude Include="source\kanas\core\shader_module.h" />
+    <ClInclude Include="source\kanas\core\subpass.h" />
+    <ClInclude Include="source\kanas\core\subpass_list.h" />
+    <ClInclude Include="source\kanas\core\surface.h" />
+    <ClInclude Include="source\kanas\core\swapchain.h" />
+    <ClInclude Include="source\kanas\core\synchronization\Event.h" />
+    <ClInclude Include="source\kanas\core\synchronization\fence.h" />
+    <ClInclude Include="source\kanas\core\synchronization\semaphore.h" />
+    <ClInclude Include="source\kanas\core\types.h" />
+    <ClInclude Include="source\kanas\core\vulkan_instance.h" />
+    <ClInclude Include="source\kanas\core\vulkan_object.h" />
+    <ClInclude Include="source\kanas\dispatcher.h" />
+    <ClInclude Include="source\kanas\Kanas.h" />
+    <ClInclude Include="source\kanas\kanas_macros.h" />
+    <ClInclude Include="source\network\network_dispatcher.h" />
+    <ClInclude Include="source\public\glew.h" />
+    <ClInclude Include="source\public\glfw.h" />
+    <ClInclude Include="source\public\glm.h" />
+    <ClInclude Include="source\public\json.h" />
+    <ClInclude Include="source\public\lua.h" />
+    <ClInclude Include="source\public\pugixml.h" />
+    <ClInclude Include="source\public\stb.h" />
+    <ClInclude Include="source\public\stl.h" />
+    <ClInclude Include="source\public\vui.h" />
+    <ClInclude Include="source\public\vulkan_core.h" />
+    <ClInclude Include="source\utils\fbx\fbx_loader.h" />
+    <ClInclude Include="source\utils\gltf\components\gltf_accessor.h" />
+    <ClInclude Include="source\utils\gltf\components\gltf_animation.h" />
+    <ClInclude Include="source\utils\gltf\components\gltf_asset.h" />
+    <ClInclude Include="source\utils\gltf\components\gltf_buffer.h" />
+    <ClInclude Include="source\utils\gltf\components\gltf_buffer_view.h" />
+    <ClInclude Include="source\utils\gltf\components\gltf_camera.h" />
+    <ClInclude Include="source\utils\gltf\components\gltf_file.h" />
+    <ClInclude Include="source\utils\gltf\components\gltf_image.h" />
+    <ClInclude Include="source\utils\gltf\components\gltf_material.h" />
+    <ClInclude Include="source\utils\gltf\components\gltf_mesh.h" />
+    <ClInclude Include="source\utils\gltf\components\gltf_node.h" />
+    <ClInclude Include="source\utils\gltf\components\gltf_sampler.h" />
+    <ClInclude Include="source\utils\gltf\components\gltf_scene.h" />
+    <ClInclude Include="source\utils\gltf\components\gltf_skin.h" />
+    <ClInclude Include="source\utils\gltf\components\gltf_texture.h" />
+    <ClInclude Include="source\utils\gltf\gltf_loader.h" />
+    <ClInclude Include="source\window\window.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="source\embedded\python_example" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
